@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="p5-patched.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+    <script> 
+    	function snapStrengthChanged(e) {
+    		snapStrength = e.value;
+    		document.getElementById('snapStrength').innerHTML = '' + snapStrength;
+    		renderText();
+			}
+			function snapDistanceChanged(e) {
+    		snapDistance = e.value;
+    		document.getElementById('snapDistance').innerHTML = '' + snapDistance;
+    		renderText();
+			}
+			function snapXChanged(e) {
+    		snapX = e.value * 1.0;
+    		document.getElementById('snapX').innerHTML = '' + snapX;
+    		renderText();
+			}
+			function snapYChanged(e) {
+    		snapY = e.value * 1.0;
+    		document.getElementById('snapY').innerHTML = '' + snapY;
+    		renderText();
+			}
+      function download(){
+        font.download();
+      }
+    </script>
+    <div id="title">
+        <h1> Typeface Deformer </h1>
+        <p style="font-size:0.8em"> <a href= "https://www.hafiyyandi.com/single-post/2018/11/26/Comp-Typo-Deformed-Font-Generator" target="_blank"> Documentation </a> </p>
+    </div>
+    
+
+    <div id="setting">
+        <p> 
+        Typeface:
+        <select id="fontselect" onchange="renderText()">
+            <option value="leaguegothic" selected="">League Gothic Regular</option>
+            <option value="cinzel">Cinzel Regular</option>
+            <option value="chopinscript">Chopin Script</option>
+        </select>
+        </p>
+
+        <div id="twocol">
+            <div class="col">
+                <label>Strength <input type="range" min="0" max="100" value="80" oninput="snapStrengthChanged(this)"/><span id="snapStrength">80</span></label>
+                <br>
+                <label>Distance<input type="range" min="500" max="10000" value="1000" oninput="snapDistanceChanged(this)"/><span id="snapDistance">1000</span></label>
+            </div>
+            <div class="col">
+                <label>X<input type="range" min="-1000" max="1000" value="0" oninput="snapXChanged(this)"/><span id="snapX">0</span></label>
+                <br>
+                <label>Y<input type="range" min="-1000" max="1000" value="0" oninput="snapYChanged(this)"/><span id="snapY">0</span></label>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div id="preview">
+        <button id="download" onclick="download()">Download Morphed Typeface</button> 
+        <p> Preview:  </p>
+    </div>
+  </body>
+</html>

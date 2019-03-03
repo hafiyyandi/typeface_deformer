@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 15px;
+  font-family: 'Roboto Mono', monospace;
+  font-size:13px;
+}
+canvas {
+  display: block;
+}
+
+#title {
+	width: 50%;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: lightgrey 1px solid;
+}
+
+#fontselect{
+	font-family: 'Roboto Mono', monospace;
+}
+
+#setting{
+	width: 50%;
+	padding-bottom: 40px;
+	/*border-bottom: lightgrey 1px solid;*/
+}
+
+#preview {
+	width:50%;
+	border-top: lightgrey 1px solid;
+	margin-top:40px;
+	margin-top: 40px;
+	padding-top:20px;
+}
+
+#download {
+	font-family: 'Roboto Mono', monospace;
+    margin-top: 15px;
+    padding: 10px;
+    background: #ED1566;
+    color: white;
+    border: none;
+}
+
+.col {
+	float: left;
+  	width: 50%;
+}
