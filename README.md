@@ -1,7 +1,10 @@
 # typeface_deformer
 Choose a font. Brutalize it. Download it. Use it!
-(Picture)
+
+![alt text](https://static.wixstatic.com/media/a544de_ea814f29c29f42a3b09cf0fe9e0df905~mv2.jpg/v1/fill/w_1308,h_736,al_c,q_85,usm_0.66_1.00_0.01/a544de_ea814f29c29f42a3b09cf0fe9e0df905~mv2.webp)
+
 See [live app](https://www.hafiyyandi.com/typeface-deformer)
+
 Code adapted from [OpenType.JS](https://github.com/opentypejs/opentype.js/blob/master/index.html
 ) & Allison Parrish’s [modify every glyph](https://editor.p5js.org/allison.parrish/sketches/SJwZn0wpQ).
 
